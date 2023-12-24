@@ -1,0 +1,23 @@
+
+void setup(){
+Serial.begin(9600);
+
+}
+
+
+void loop(){
+int g = 0;
+g = distance(0,0,16,16);
+Serial.println(g);
+while(1){}
+}  
+
+
+
+int distance(int x1, int y1 , int x2, int y2){
+
+  int dx = x2-x1;
+  int dy = y2-y1;
+  int out = sqrt(pow(dx,2) + pow(dy,2));
+  return out;
+}
